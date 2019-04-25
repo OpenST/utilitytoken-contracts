@@ -19,7 +19,9 @@
   },
   "devDependencies": {
     "truffle": "5.0.1",
-    "ganache-cli": "6.1.8"
+    "ganache-cli": "6.1.8",
+    "web3": "1.0.0-beta.36",
+    "abi-decoder": "1.2.0"
   },
   "scripts": {
     "compile": "truffle compile",
