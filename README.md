@@ -43,7 +43,7 @@ The following npm script compiles updated contracts from the last call:
 npm run compile
 ```
 
-, to compile all contracts, run:
+To compile all contracts, run:
 
 ```bash
 npm run compile-all
