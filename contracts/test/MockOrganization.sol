@@ -30,7 +30,6 @@ import "../organization/contracts/OrganizationInterface.sol";
  */
 contract MockOrganization is OrganizationInterface {
 
-
     /* Storage */
 
     /** The address of the registered owner. */

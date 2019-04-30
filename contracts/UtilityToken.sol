@@ -192,7 +192,7 @@ contract UtilityToken is EIP20Token, Organized, UtilityTokenInterface {
     /* Internal functions. */
 
     /**
-     * @notice Internal function to increases the total token supply.
+     * @notice Internal function to increase the total token supply.
      *
      * @dev Adds number of tokens to beneficiary balance and increases the
      *      total token supply.
@@ -223,7 +223,7 @@ contract UtilityToken is EIP20Token, Organized, UtilityTokenInterface {
     }
 
     /**
-     * @notice Internal function to decreases the token supply.
+     * @notice Internal function to decrease the token supply.
      *
      * @dev Decreases the token balance from the msg.sender address and
      *      decreases the total token supply count.

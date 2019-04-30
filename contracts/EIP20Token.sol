@@ -30,6 +30,8 @@ import "./SafeMath.sol";
  */
 contract EIP20Token is EIP20Interface {
 
+    /* Usings */
+
     using SafeMath for uint256;
 
     /** Name of the token. */
@@ -128,7 +130,6 @@ contract EIP20Token is EIP20Interface {
     {
         totalTokenSupply_ = totalTokenSupply;
     }
-
 
     /**
      * @notice Public function to get the allowance.
