@@ -1,5 +1,9 @@
 # OSX
 .DS_Store
+.idea/
+
+# VS Code
+.vscode
 
 # Vagrant
 .vagrant/

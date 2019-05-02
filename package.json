@@ -1,0 +1,36 @@
+{
+  "name": "@openst/utilitytoken-contracts",
+  "version": "0.10.0",
+  "description": "Utility token contracts provide ABIs and BINs for EVM smart contracts related to utility token",
+  "keywords": [
+    "OpenST",
+    "OST",
+    "Simple Token",
+    "Token Economy",
+    "web3",
+    "Ethereum",
+    "EIP20",
+    "UtilityToken"
+  ],
+  "homepage": "https://openst.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenST/utilitytoken-contracts.git"
+  },
+  "devDependencies": {
+    "truffle": "5.0.1",
+    "ganache-cli": "6.1.8",
+    "web3": "1.0.0-beta.36",
+    "abi-decoder": "1.2.0"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "compile-all": "truffle compile --all",
+    "test": "truffle test",
+    "ganache": "sh tools/runGanacheCli.sh",
+    "lint": "eslint {migrations,test,test_integration,tools} -c .eslintrc.json --ext js"
+  },
+  "main": "dist/index.js",
+  "author": "OpenST Foundation Ltd.",
+  "license": "Apache-2.0"
+}
