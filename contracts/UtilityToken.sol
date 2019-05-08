@@ -173,11 +173,13 @@ contract UtilityToken is EIP20Token, Organized, UtilityTokenInterface {
      * @notice Sets the CoGateway contract address. This can be called by
      *         UtilityToken contract or contract inheriting it. This can be
      *         set only once.
-     * @param _coGatewayAddress CoGateway contract address
+     * @param _coGateway CoGateway contract address
      *
      * @return success_ `true` if CoGateway address was set
      */
-    function setCoGatewayInternal(address _coGatewayAddress)
+    function setCoGatewayInternal(
+        address _coGateway
+    )
         internal
         returns (bool success_)
     {
