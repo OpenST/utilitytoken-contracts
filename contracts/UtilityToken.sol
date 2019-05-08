@@ -177,7 +177,7 @@ contract UtilityToken is EIP20Token, Organized, UtilityTokenInterface {
      *
      * @return success_ `true` if CoGateway address was set
      */
-    function setCoGatewayInternal(address _coGateway)
+    function setCoGatewayInternal(address _coGatewayAddress)
         internal
         returns (bool success_)
     {
