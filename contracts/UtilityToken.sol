@@ -112,29 +112,7 @@ contract UtilityToken is EIP20Token, Organized, UtilityTokenInterface {
         onlyOrganization
         returns (bool success_)
     {
-        require(
-            coGateway == address(0),
-            "CoGateway address is already set."
-        );
-
-        require(
-            _coGatewayAddress != address(0),
-            "CoGateway address should not be zero."
-        );
-
-        // protect against reentrancy by setting the coGateway
-        // before querying the contract.
-        coGateway = _coGatewayAddress;
-
-        require(
-            CoGatewayUtilityTokenInterface(_coGatewayAddress).utilityToken()
-                == address(this),
-            "CoGateway should be linked with this utility token."
-        );
-
-        emit CoGatewaySet(coGateway);
-
-        success_ = true;
+        success_ = setCoGatewayInternal(_coGatewayAddress);
     }
 
     /**
@@ -190,6 +168,43 @@ contract UtilityToken is EIP20Token, Organized, UtilityTokenInterface {
 
 
     /* Internal functions. */
+
+    /**
+     * @notice Sets the CoGateway contract address. This can be called UtilityToken
+     *         contract or contract inheriting it. This can be set only once.
+     *
+     * @param _coGatewayAddress CoGateway contract address
+     *
+     * @return success_ `true` if CoGateway address was set
+     */
+    function setCoGatewayInternal(address _coGateway)
+        internal
+        returns (bool success_)
+    {
+        require(
+            coGateway == address(0),
+            "CoGateway address is already set."
+        );
+
+        require(
+            _coGateway != address(0),
+            "CoGateway address should not be zero."
+        );
+
+        // protect against reentrancy by setting the coGateway
+        // before querying the contract.
+        coGateway = _coGateway;
+
+        require(
+            CoGatewayUtilityTokenInterface(_coGateway).utilityToken()
+                == address(this),
+            "CoGateway should be linked with this utility token."
+        );
+
+        emit CoGatewaySet(coGateway);
+
+        success_ = true;
+    }
 
     /**
      * @notice Internal function to increase the total token supply.
