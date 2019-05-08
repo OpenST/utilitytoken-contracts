@@ -170,9 +170,9 @@ contract UtilityToken is EIP20Token, Organized, UtilityTokenInterface {
     /* Internal functions. */
 
     /**
-     * @notice Sets the CoGateway contract address. This can be called UtilityToken
-     *         contract or contract inheriting it. This can be set only once.
-     *
+     * @notice Sets the CoGateway contract address. This can be called by
+     *         UtilityToken contract or contract inheriting it. This can be
+     *         set only once.
      * @param _coGatewayAddress CoGateway contract address
      *
      * @return success_ `true` if CoGateway address was set
