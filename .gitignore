@@ -41,3 +41,6 @@ dist/contracts.json
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+
+# Do not track generated wrapper, it should be part of build script
+interacts/*
