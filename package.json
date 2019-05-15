@@ -32,8 +32,8 @@
     "test": "truffle test",
     "ganache": "sh tools/runGanacheCli.sh",
     "lint": "eslint {migrations,test,test_integration,tools} -c .eslintrc.json --ext js",
-    "generate": "ts-generator ts-generator.json",
-    "postinstall": "npm run compile-all && npm run generate"
+    "generate:interacts": "ts-generator ts-generator.json",
+    "postinstall": "npm run compile-all && npm run generate:interacts"
   },
   "main": "dist/index.js",
   "author": "OpenST Foundation Ltd.",
