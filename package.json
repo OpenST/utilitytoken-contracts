@@ -22,14 +22,18 @@
     "ganache-cli": "6.1.8",
     "openzeppelin-solidity": "2.1.1",
     "truffle": "5.0.1",
-    "web3": "1.0.0-beta.36"
+    "web3": "1.0.0-beta.36",
+    "ts-generator": "0.0.8",
+    "typechain": "0.3.14"
   },
   "scripts": {
     "compile": "truffle compile",
     "compile-all": "truffle compile --all",
     "test": "truffle test",
     "ganache": "sh tools/runGanacheCli.sh",
-    "lint": "eslint {migrations,test,test_integration,tools} -c .eslintrc.json --ext js"
+    "lint": "eslint {migrations,test,test_integration,tools} -c .eslintrc.json --ext js",
+    "generate:interacts": "ts-generator ts-generator.json",
+    "postinstall": "npm run compile-all && npm run generate:interacts"
   },
   "main": "dist/index.js",
   "author": "OpenST Foundation Ltd.",
